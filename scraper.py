@@ -1,6 +1,7 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import time
 
 # define target URL to scrape
@@ -8,7 +9,9 @@ url_to_scrape = "https://coinmarketcap.com/"
 
 # uses chrome driver to load entire page + JS
 chrome_path = "./chromedriver.exe"
-driver = webdriver.Chrome(chrome_path)
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome(chrome_path, options=options)
 driver.set_window_size(1920, 1080)
 driver.get(url_to_scrape)
 for i in range(0, 7):
