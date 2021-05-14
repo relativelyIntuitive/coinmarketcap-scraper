@@ -1,5 +1,7 @@
 "# coinmarketcap-scraper" 
 
+A simple scraping program I coded to pull market data for the top 100 currencies listed on the homepage of CoinMarketCap.com. The results will be saved to a .csv file in the root directory.
+
 1. Ensure that Python3 AND Chrome browser are properly installed on your system
 2. Create a virtual environment to install dependencies
 3. Activate the virtual environment
