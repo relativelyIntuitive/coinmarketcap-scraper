@@ -3,17 +3,25 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import sqlite3
+
+
+
+# sqlite3 configuration
+connector.connect('coinmarket_scraper_db')
 
 # define target URL to scrape
 url_to_scrape = "https://coinmarketcap.com/"
 
-# uses chrome driver to load entire page + JS
+# uses Chrome driver to get entire page and scroll to load JS generated HTML <tr> elements
 chrome_path = "./chromedriver.exe"
+# runs Chrome without the UI to load the JS generate HTML
 options = Options()
 options.add_argument('--headless')
 driver = webdriver.Chrome(chrome_path, options=options)
 driver.set_window_size(1920, 1080)
 driver.get(url_to_scrape)
+# scrolls the page, allowing time for each chunk's JS to generate the necessary <tr> data via time.sleep()
 for i in range(0, 8):
     driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
     time.sleep(1)
