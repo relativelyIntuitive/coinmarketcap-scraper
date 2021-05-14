@@ -1,3 +1,5 @@
 top100.csv
-/py3Env
+py3Env/
+.vscode
+.vscode/
 coinmarketcap_scraper_db
