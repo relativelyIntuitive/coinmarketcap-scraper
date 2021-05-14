@@ -3,16 +3,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
-import sqlite3
 
-
-
-# sqlite3 db config (work in progress)
-try:
-    conn = sqlite3.connect("coinmarketcap_scraper_db")
-    print("SQLite connected!")
-except Exception as e: 
-    print("Error during connection: ", str(e))
 
 
 # define target URL to scrape
@@ -73,6 +64,3 @@ for i in range(1, len(currency_items)):
 
 # closes the results file
 f.close()
-
-# closes the db connection
-conn.close()
