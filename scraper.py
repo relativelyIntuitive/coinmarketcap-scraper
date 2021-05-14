@@ -7,7 +7,7 @@ import sqlite3
 
 
 
-# sqlite3 db config
+# sqlite3 db config (work in progress)
 try:
     conn = sqlite3.connect("coinmarketcap_scraper_db")
     print("SQLite connected!")
