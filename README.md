@@ -10,7 +10,7 @@ A simple scraping program I coded to pull market data for the top 100 currencies
 5. The "chromedriver.exe" file is for the Windows edition of Chrome version 90, if you have a different version of chrome installed, download the proper driver from "https://chromedriver.chromium.org/downloads", unzip the package, and replace "chromedriver.exe" with the extracted executable
 6. Run "scraper.py" with Python3 from the root directory
 7. The program will run for less than 30 seconds
-8. A .csv file will be created within the root directory with the results! 
+8. A .csv file will be created within the root directory, containing the results! 
 
 NO LICENSE! THIS CODE IS NOT MEANT TO BE REUSED OR REPRODUCED!
 Copyright ©2021 Zachery A. Bielicki, all rights reserved

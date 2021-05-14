@@ -14,7 +14,7 @@ options.add_argument('--headless')
 driver = webdriver.Chrome(chrome_path, options=options)
 driver.set_window_size(1920, 1080)
 driver.get(url_to_scrape)
-for i in range(0, 7):
+for i in range(0, 8):
     driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
     time.sleep(1)
 page_html = driver.page_source
