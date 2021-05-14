@@ -11,18 +11,9 @@ chrome_path = "./chromedriver.exe"
 driver = webdriver.Chrome(chrome_path)
 driver.set_window_size(1920, 1080)
 driver.get(url_to_scrape)
-driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
-time.sleep(1)
-driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
-time.sleep(1)
-driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
-time.sleep(1)
-driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
-time.sleep(1)
-driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
-time.sleep(1)
-driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
-time.sleep(1)
+for i in range(0, 7):
+    driver.execute_script("window.scrollBy({top:1500,left:0,behavior: 'smooth'})")
+    time.sleep(1)
 page_html = driver.page_source
 driver.quit()
 
