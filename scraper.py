@@ -3,12 +3,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
-import sqlite3
 
 
-
-# sqlite3 configuration
-connector.connect('coinmarket_scraper_db')
 
 # define target URL to scrape
 url_to_scrape = "https://coinmarketcap.com/"
