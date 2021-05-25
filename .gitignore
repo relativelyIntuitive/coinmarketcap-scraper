@@ -1,5 +1,5 @@
 top100.csv
 py3Env/
-.vscode
 .vscode/
-coinmarketcap_scraper_db
+coinmarketcap_scraper_db.db
+coinmarketcap_scraper_db.sqbpro
